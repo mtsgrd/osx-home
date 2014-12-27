@@ -4,6 +4,8 @@ filetype plugin indent on
 
 " Enable solarized colors.
 set background=dark
+
+" This should be set to 16 for Mountain Lion and older.
 let g:solarized_termcolors=256
 colorscheme solarized
 
