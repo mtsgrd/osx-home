@@ -6,7 +6,8 @@ filetype plugin indent on
 set background=dark
 
 " This should be set to 16 for Mountain Lion and older.
-let g:solarized_termcolors=16
+set t_Co=256
+let g:solarized_termcolors=256
 colorscheme solarized
 
 " Highlight search results
@@ -30,6 +31,9 @@ set autoindent
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" associate *.foo with php filetype
+au BufRead,BufNewFile *.soy setfiletype html
 
 " Clear search highlight using space
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
